@@ -1,10 +1,10 @@
 {
   "name": "workshop-2",
-  "version": "1.0.0",
+  "version": "0.5.0",
   "description": "simple ts workshop project",
   "type": "module",
   "main": "./dist/index.cjs",
-  "module": "./dist/index.js",
+  "module": "dist/index.mjs",
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {

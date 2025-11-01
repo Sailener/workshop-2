@@ -1,6 +1,6 @@
 import { add, capitalize, formatNumber, Logger, type LogLevel, config } from './index.js';
 
-console.log('sum(typed):', add(2, 3));
+console.log('sum(2.0 ok):', add([2, 3, 4]));
 console.log('capitalize(typed):', capitalize('hello'));
 
 console.log('format(ok):', formatNumber(123.456)); // precision береться з APP_PRECISION
