@@ -2,7 +2,23 @@
   "name": "workshop-2",
   "version": "0.0.0",
   "description": "simple ts workshop project",
-  "main": "src/index.ts",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=18.17"
+  },
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts",
     "lint": "eslint . --ext .ts",
@@ -14,7 +30,7 @@
     "prepare": "husky"
   },
   "author": "",
-  "license": " MIT",
+  "license": "MIT",
   "dependencies": {
     "dotenv": "^17.2.3",
     "zod": "^4.1.12"
@@ -28,6 +44,7 @@
     "commitlint": "^20.1.0",
     "eslint": "^9.38.0",
     "eslint-config-prettier": "^10.1.8",
+    "globals": "^16.5.0",
     "husky": "^9.1.7",
     "prettier": "^3.6.2",
     "tsup": "^8.5.0",
