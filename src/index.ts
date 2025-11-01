@@ -1,5 +1,6 @@
-import * as dotenv from 'dotenv';
-dotenv.config();
+import { config, type Config, type LogLevel } from './config.js';
+export { config };
+export type { Config, LogLevel };
 
 /** Мінімальні утиліти без суворої типізації */
 
@@ -42,7 +43,7 @@ export function groupBy<T>(arr: T[], key: keyof T): Record<string, T[]> {
     {} as Record<string, T[]>,
   );
 }
-export type LogLevel = 'silent' | 'info' | 'debug';
+
 export class Logger {
   constructor(private level: LogLevel) {}
 

@@ -10,3 +10,4 @@ const schema = z.object({
 
 export const config = schema.parse(process.env);
 export type Config = z.infer<typeof schema>;
+export type LogLevel = z.infer<typeof schema>['LOG_LEVEL'];

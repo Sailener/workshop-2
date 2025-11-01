@@ -5,7 +5,7 @@ const prettier = require('eslint-config-prettier');
 const globals = require('globals');
 
 module.exports = [
-  { ignores: ['**/*.cjs'] },
+  { ignores: ['**/*.cjs', 'dist/**'] },
   js.configs.recommended,
   prettier,
   {
@@ -26,7 +26,7 @@ module.exports = [
     rules: {
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
-      '@typescript-eslint/no-explicit-any': 'warn',
+      '@typescript-eslint/no-explicit-any': 'error',
     },
   },
 ];
